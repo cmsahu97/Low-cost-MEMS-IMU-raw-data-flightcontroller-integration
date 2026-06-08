@@ -106,4 +106,4 @@ To keep the Cube's high-speed internal isolated IMUs from out-voting or cutting 
 
 ---
 ## 📄 License
-This architecture is released under the MIT License. Feel free to use, adapt, and deploy it on your commercial uncrewed vehicles!
+Feel free to use, adapt, and deploy it on your commercial uncrewed vehicles! but give credit to this page. 
