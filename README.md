@@ -48,12 +48,33 @@ The cross-check validation profile below shows the synchronized data profile bet
 
 ---
 
+## 📊 System Performance & Demonstrations
+
+### Hardware Circuit Configuration
+Below is the verified electrical routing topology linking the STM32 development platform to the MEMS sensor array over Fast-Mode I2C and out to the flight controller transceiver.
+
+![Circuit Diagram Matrix](Circuit_diagram.svg)
+
+### System Operation Overview
+Below is a demonstration of the system booting up, completing its initial gyro calibration matrix, and streaming raw high-speed data directly into the flight controller's EKF3 state estimation engine without dropping frames.
+
+<video src="video_demonstration.mp4" width="100%" controls autoplay loop muted></video>
+
+### Real-Time EKF Telemetry Sync
+The cross-check validation profile below shows the synchronized data profile between the raw sensor outputs and the flight controller state estimator tracking the artificial horizon moving in perfect real-time synchronization.
+
+![Hardware Setup and Telemetry Synchronization Profile](image_33155d.png)
+
+---
+
 ## 📂 Repository File Structure
 
 * **`README.md`** - This comprehensive integration and configuration manual.
-* **`external_IMU_main.cpp`** - The core high-speed embedded execution firmware containing the packed binary structs, dynamic $dt$ loop calculus filters, and I2C registers routing.
-* **`image_33155d.png`** - Real-time calibration validation telemetry capture screenshot.
+* **`external_IMU_main.cpp`** - The core high-speed embedded execution firmware containing the packed binary structs, dynamic dt loop calculus filters, and I2C registers routing.
+* **`Circuit_diagram.svg`** - Complete schematics and physical wiring layout between the MCU, IMU, and Autopilot.
 * **`video_demonstration.mp4`** - Physical hardware wiring validation video clip.
+
+
 
 ---
 
