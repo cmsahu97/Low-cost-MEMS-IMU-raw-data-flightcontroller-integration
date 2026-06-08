@@ -1,6 +1,6 @@
 # An Integration of Low-Cost MEMS Inertial Sensor on Flightcontroller
 
-This repository provides a complete, production-ready embedded C++ engineering pipeline that integrates a low-cost MEMS inertial sensor (**LSM9DS1**) into high-end ArduPilot flight controllers (**Cube Orange+** / **Pixhawk 2.4.8**). By emulating the industrial **SBG Systems ECom Binary Protocol** over hardware UART, this system functions as a high-frequency, reliable **External AHRS (Attitude and Heading Reference System)** node.
+This repository provides a complete, production-ready embedded C++ engineering pipeline that integrates a low-cost MEMS inertial sensor (**LSM9DS1**) into high-end ArduPilot flight controllers (**Cube Orange+** / **Pixhawk 6C**). By emulating the industrial **SBG Systems ECom Binary Protocol** over hardware UART, this system functions as a high-frequency, reliable **External AHRS (Attitude and Heading Reference System)** node.
 
 ---
 
