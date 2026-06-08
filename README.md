@@ -1,7 +1,12 @@
 # An Integration of Low-Cost MEMS Inertial Sensor on Flightcontroller
 
-This repository provides a complete, production-ready embedded C++ engineering pipeline that integrates a low-cost MEMS inertial sensor (**LSM9DS1**) into high-end ArduPilot flight controllers (**Cube Orange+** / **Pixhawk 6C**). By emulating the industrial **SBG Systems ECom Binary Protocol** over hardware UART, this system functions as a high-frequency, reliable **External AHRS (Attitude and Heading Reference System)** node.
+This repository provides a complete, production-ready embedded C++ engineering pipeline that integrates a low-cost MEMS inertial sensor (**LSM9DS1**) into ArduPilot flight controllers (**Cube Orange+** / **Pixhawk 6C**). By emulating the industrial **SBG Systems ECom Binary Protocol** over hardware UART, this system functions as a high-frequency, reliable **External AHRS (Attitude and Heading Reference System)** node.
 
+### 📊 Raw Sensor Utilization Profile
+The underlying firmware ingests raw, independent data streams from the external MEMS inertial sensor and transforms them into standard aerospace vectors for native Extended Kalman Filter (EKF3) processing:
+* **Raw Gyroscope ($g_x, g_y, g_z$):** Sampled continuously at 250Hz. After processing a rigid power-on zero-bias calibration, these high-frequency angular rates are integrated into delta angles ($\Delta\theta$) to handle rapid rotational velocity tracking and immediate attitude stabilization.
+* **Raw Accelerometer ($a_x, a_y, a_z$):** Captured at 250Hz and mapped to the standard Forward-Right-Down (FRD) airframe configuration. These linear acceleration metrics are mathematically processed into delta velocities ($\Delta V$) to track translational motion changes, vibrations, and physical tilt constraints.
+* **Raw Magnetometer ($m_x, m_y, m_z$):** Interleaved into the streaming pipeline at a stable 50Hz cadence. This tri-axial magnetic flux density data acts as an absolute earth-field reference vector, continuously mitigating long-term heading gyroscopic drift and locking in real-world true-North heading alignment.
 ---
 
 ## 📊 System Performance & Demonstrations
