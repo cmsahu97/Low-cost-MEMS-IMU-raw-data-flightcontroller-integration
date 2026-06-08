@@ -6,16 +6,15 @@ This repository provides a complete, production-ready embedded C++ engineering p
 
 ## 📊 System Performance & Demonstrations
 
+### Hardware Circuit Configuration
+Below is the verified electrical routing topology linking the STM32 development platform to the MEMS sensor array over Fast-Mode I2C and out to the flight controller transceiver.
+
+![Circuit Diagram Matrix](Circuit_diagram.svg)
+
 ### System Operation Overview
 Below is a demonstration of the system booting up, completing its initial gyro calibration matrix, and streaming raw high-speed data directly into the flight controller's EKF3 state estimation engine without dropping frames.
 
-![System Demonstration Video Placeholder](video_demonstration.gif)
-*Note: If your browser does not support inline GIF playback, please view the raw demonstration clip inside the repository file root (`video_demonstration.mp4`).*
-
-### Real-Time EKF Telemetry Sync
-The cross-check validation profile below shows the synchronized data profile between the raw sensor outputs and the flight controller state estimator tracking the artificial horizon moving in perfect real-time synchronization.
-
-![Hardware Setup and Telemetry Synchronization Profile](image_33155d.png)
+<video src="video_demonstration.mp4" width="100%" controls autoplay loop muted></video>****
 
 ---
 
@@ -46,24 +45,6 @@ The cross-check validation profile below shows the synchronized data profile bet
 | **PA2 (TX1)** | Cube GPS1 Port **RX Pin** | UART TX | High-Speed Packed Binary Transmission Line |
 | **PA3 (RX1)** | Cube GPS1 Port **TX Pin** | UART RX | Receive (Used for physical loopback testing) |
 
----
-
-## 📊 System Performance & Demonstrations
-
-### Hardware Circuit Configuration
-Below is the verified electrical routing topology linking the STM32 development platform to the MEMS sensor array over Fast-Mode I2C and out to the flight controller transceiver.
-
-![Circuit Diagram Matrix](Circuit_diagram.svg)
-
-### System Operation Overview
-Below is a demonstration of the system booting up, completing its initial gyro calibration matrix, and streaming raw high-speed data directly into the flight controller's EKF3 state estimation engine without dropping frames.
-
-<video src="video_demonstration.mp4" width="100%" controls autoplay loop muted></video>
-
-### Real-Time EKF Telemetry Sync
-The cross-check validation profile below shows the synchronized data profile between the raw sensor outputs and the flight controller state estimator tracking the artificial horizon moving in perfect real-time synchronization.
-
-![Hardware Setup and Telemetry Synchronization Profile](image_33155d.png)
 
 ---
 
