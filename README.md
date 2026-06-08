@@ -14,7 +14,9 @@ Below is the verified electrical routing topology linking the STM32 development 
 ### System Operation Overview
 Below is a demonstration of the system booting up, completing its initial gyro calibration matrix, and streaming raw high-speed data directly into the flight controller's EKF3 state estimation engine without dropping frames.
 
-<img src="video_demonstration.gif" width="50%" alt="System Demonstration">
+<p align="center">
+  <img src="video_demonstration.gif" width="48%" alt="System Demonstration" />
+</p>
 
 ---
 
