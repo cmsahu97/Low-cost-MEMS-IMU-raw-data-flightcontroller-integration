@@ -112,5 +112,5 @@ To keep the Cube's high-speed internal isolated IMUs from out-voting or cutting 
   * *Cause:* Signal wiring issue. Double-check that your Black Pill's `PA2 (TX)` line is connected to the physical **RX pin** of the GPS1 connector block.
 
 ---
-## 📄 License
-Feel free to use, adapt, and deploy it on your commercial uncrewed vehicles! but give credit to this page. 
+##
+If you are using this engineering process, please cite: C. Sahu, [“Low-Cost External Inertial Measurement Unit Integration Framework for ArduPilot-Based Flight Controllers Using Real-Time Raw Sensor Streaming”](https://doi.org/10.5281/zenodo.20596580). Zenodo, Jun. 08, 2026. doi: 10.5281/zenodo.20596580.
