@@ -61,7 +61,7 @@ Below is a demonstration of the system booting up, completing its initial gyro c
 * **`external_IMU_main.cpp`** - The core high-speed embedded execution firmware containing the packed binary structs, dynamic dt loop calculus filters, and I2C registers routing.
 * **`Circuit_diagram.svg`** - Complete schematics and physical wiring layout between the MCU, IMU, and Autopilot.
 * **`video_demonstration.mp4`** - Physical hardware wiring validation video clip.
-
+* **`copter-CubeOrangePlus..*.zip`** - Custom designed firmware for CubeOrangePlus with necessary driver for external IMU.
 
 
 ---
